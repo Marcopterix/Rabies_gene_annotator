@@ -69,7 +69,8 @@ source ~/.bashrc
 # Uso y ejecución del pipline
 
 Una vez que tenga todos los requisitos, deberá ejecutar el pipeline de este modo:
-
+ Nota: Es importante que pegue las rutas completas en las opciones de "-f" y "-o" para que se pueda ejecutar de forma correcta el pipeline.
+ 
 ```
 bash rabies_gene_annotator.sh -f FASTA file directory -o OUTPUT directory -p PATH to BLAST DB 
 
