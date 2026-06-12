@@ -104,7 +104,8 @@ echo -e "##### ${ID} #####"
 
 blastx -query ${assembly} \
        -db ${dirdb}/${dbN} \
-       -max_hsps 1 -culling_limit 1 \
+       -max_target_seqs 1 -max_hsps 1 \
+	   -num_threads 5 \
        -out ${dirout}/${ID}_N_blastx.tsv \
        -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend evalue bitscore qseq'
 
@@ -131,7 +132,8 @@ echo -e "##### ${ID} #####"
 
 blastx -query ${assembly} \
        -db ${dirdb}/${dbP} \
-       -max_hsps 1 -culling_limit 1 \
+       -max_target_seqs 1 -max_hsps 1 \
+	   -num_threads 5 \
        -out ${dirout}/${ID}_P_blastx.tsv \
        -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend evalue bitscore qseq'
 
@@ -158,7 +160,8 @@ echo -e "##### ${ID} #####"
 
 blastx -query ${assembly} \
        -db ${dirdb}/${dbM} \
-       -max_hsps 1 -culling_limit 1 \
+       -max_target_seqs 1 -max_hsps 1 \
+	   -num_threads 5 \
        -out ${dirout}/${ID}_M_blastx.tsv \
        -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend evalue bitscore qseq'
 
@@ -185,7 +188,8 @@ echo -e "##### ${ID} #####"
 
 blastx -query ${assembly} \
        -db ${dirdb}/${dbG} \
-       -max_hsps 1 -culling_limit 1 \
+       -max_target_seqs 1 -max_hsps 1 \
+	   -num_threads 5 \
        -out ${dirout}/${ID}_G_blastx.tsv \
        -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend evalue bitscore qseq'
 
@@ -212,7 +216,8 @@ echo -e "##### ${ID} #####"
 
 blastx -query ${assembly} \
        -db ${dirdb}/${dbL} \
-       -max_hsps 1 -culling_limit 1 \
+       -max_target_seqs 1 -max_hsps 1 \
+	   -num_threads 5 \
        -out ${dirout}/${ID}_L_blastx.tsv \
        -outfmt '6 qseqid sseqid pident length mismatch gapopen qstart qend evalue bitscore qseq'
 
