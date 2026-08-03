@@ -19,7 +19,7 @@ Para clonar el repositorio deberá ejecutar:
  git clone https://github.com/Marcopterix/Rabies_gene_annotator
 ```
 
-Una vez que haya clonado el repositorio, deberá drigirse al directorio ***bin/*** y otorgarle permiso de ejecución a los scripts:
+Una vez que haya clonado el repositorio, deberá drigirse al directorio ***Rabies_gene_annotator/bin*** y otorgarle permiso de ejecución a los scripts:
 
 ```
 chmod +x *sh
