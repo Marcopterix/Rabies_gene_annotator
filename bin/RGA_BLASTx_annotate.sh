@@ -20,7 +20,7 @@ echo "Usage: $0 -f FASTA file PATH -o OUTDIR PATH -p BLAST DB PATH"
 echo " -h print help "
 echo " -f FASTA file directory "
 echo " -o OUTPUT directory "
-echo " -p PATH to BLAST database. If you downloaded the database by running the RGA_db_dwl.sh script, the path to your database is: $HOME/db/RGA "
+echo " -p PATH to BLAST database. If you downloaded the database by running the RGA_db_dwl.sh script, the path to your database is:  $HOME/db/BLASTx/RGA "
 echo "";
 	}
 
@@ -96,6 +96,8 @@ dbL="Lprot_RABV_db"
 #-------------------------------------
 
 echo -e "\n\033[1;36m========== Searching for gene N ==========\033[0m\n"
+
+shopt -s nullglob
 
 for assembly in *.fa *.fasta *.fna; do
     ID=$(basename ${assembly} | cut -d '.' -f '1')
