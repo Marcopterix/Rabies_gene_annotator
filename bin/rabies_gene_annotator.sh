@@ -20,7 +20,7 @@ echo "Usage: $0 -f FASTA file PATH -o OUTDIR PATH"
 echo " -h print help "
 echo " -f FASTA file directory "
 echo " -o OUTPUT directory "
-echo " -p PATH to BLAST database. If you downloades the database by running the RGA_db_dwl.sh script, the path to your database is: $HOME/db/RGA "
+echo " -p PATH to BLAST database. If you downloaded the database by running the RGA_db_dwl.sh script, the path to your database is: $HOME/db/RGA "
 echo "";
 	}
 
