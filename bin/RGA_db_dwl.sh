@@ -68,7 +68,6 @@ seqkit seq -g -m 2127 -M 2127 ProtL_RABV.faa > ProtL_RABV.fa
 
 echo -e "\033[0;36m========== L gene database created ==========\033[0m\n"
 
-chmod +x ./*.fa
 rm ./*.faa
 
 
