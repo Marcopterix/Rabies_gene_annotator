@@ -39,9 +39,9 @@ source ~/.bashrc
 You must have the following programs installed, and you ***must also add the binaries for these programs to your PATH***:
 
 
-***---> BLAST+ to run BLASTx (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#blast-executables)
----> Entrez Direct to download the database (https://www.ncbi.nlm.nih.gov/books/NBK179288/)
----> samtools to run samtools faidx (https://www.htslib.org/) and
+***---> BLAST+ to run BLASTx (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#blast-executables)  
+---> Entrez Direct to download the database (https://www.ncbi.nlm.nih.gov/books/NBK179288/)  
+---> samtools to run samtools faidx (https://www.htslib.org/) and  
 ---> seqkit (https://bioinf.shenwei.me/seqkit/download/)***
 
 # Prepare the Database
