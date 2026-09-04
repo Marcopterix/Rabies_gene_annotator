@@ -1,4 +1,4 @@
-# Rabies Gene Annotator
+# Rabies virus Gene Annotator (RvGA)
 
 Pipline escrito en bash para la anotación y obtención de los 5 genes individuales del virus de la rabia en nucleótidos y aminoácidos.
 
