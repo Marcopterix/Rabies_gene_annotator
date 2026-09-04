@@ -1,4 +1,4 @@
-# Rabies_gene_annotator
+# Rabies Gene Annotator
 
 Pipline escrito en bash para la anotación y obtención de los 5 genes individuales del virus de la rabia en nucleótidos y aminoácidos.
 
