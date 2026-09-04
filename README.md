@@ -1,36 +1,32 @@
 # Rabies virus Gene Annotator (RvGA)
 
-Pipline escrito en bash para la anotación y obtención de los 5 genes individuales del virus de la rabia en nucleótidos y aminoácidos.
+A Bash script for annotating and retrieving the 5 individual genes of the rabies virus in nucleotides and amino acids.
 
 
-# Importante:
+# Important:
 
-Este pipeline funciona bien con secuencias completas del virus de la rabia (RABV), por lo que es importante mencionar que si usted quisiera anotar secuencias fragmentadas, samtools podría llegar a fallar al intentar extraer las secuencias de sus genes. Esto se debe a que, al realizar la anotación de los genes con secuencias de proteinas como referencia, para incluir el codón de paro, se busca tres bases después de lo indicado por BLASTx; de modo que si el contig en el que se anotó el gen es más pequeño, no obtendrá la secuencia de este.
+This pipeline works well with complete rabies virus (RABV) sequences, so it is important to note that if you want to annotate fragmented sequences, SamTools may fail when attempting to extract the gene sequences. This is because, when annotating genes using protein sequences as references, SamTools searches three bases beyond the position indicated by BLASTx to include the stop codon; thus, if the contig in which the gene was annotated is shorter, SamTools will not retrieve the gene’s sequence.
 
+# Installation:
 
-También es importante que los nombres de sus archivos no contengan "_" (guiones bajos), ya que este script podría fallar en la identificación.
-
-
-# Instalación:
-
-Para clonar el repositorio deberá ejecutar:
+To clone the repository, run the following command:
 
 ```
  git clone https://github.com/Marcopterix/Rabies_virus_Gene_Annotator
 ```
 
-Una vez que haya clonado el repositorio, deberá drigirse al directorio ***Rabies_virus_Gene_Annotator/bin*** y otorgarle permiso de ejecución a los scripts:
+Once you have cloned the repository, navigate to the ***Rabies_virus_Gene_Annotator/bin*** directory and grant the scripts execute permission:
 
 ```
 chmod +x *sh
 ```
-También es importante que agregue esta carpeta al PATH en su ***~/.bashrc***:
+It's also important to add this folder to the PATH in your ***~/.bashrc***:
 ```
 nano ~/.bashrc
 
-# Una vez que esté editando su ~/.bashrc, deberá pegar la siguiente línea en un apartado donde usted tenga sus rutas,
-# en donde deberá sustituir "$HOME/PATH_TO/Rabies_virus_Gene_Annotator/bin" por la ruta complea en donde usted haya clonado su repositorio.
-# Para obtener esta ruta, deberá dirigirse al directorio bin, y una vez dentro de este, escribir en la terminal el comando pwd.
+# Once you are editing your ~/.bashrc, paste the following line into the section where your paths are listed,
+# replacing “$HOME/PATH_TO/Rabies_virus_Gene_Annotator/bin” with the full path where you cloned your repository.
+# To find this path, navigate to the bin directory, and once there, type the command pwd in the terminal.
 
 export PATH="$HOME/PATH_TO/Rabies_virus_Gene_Annotator/bin:$PATH"
 
@@ -38,24 +34,24 @@ source ~/.bashrc
 
 ```
 
-# Dependencias necesarias:
+# Required dependencies:
 
-Deberá tener instalado los siguientes programas y, de igual forma, ***deberá agregar los binarios de estos programas a su PATH***:
+You must have the following programs installed, and you ***must also add the binaries for these programs to your PATH***:
 
 
-***-> BLAST+ para poder ejecutar BLASTx (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#blast-executables)  
--> samtools para poder ejecutar samtools faidx (https://www.htslib.org/) y  
+***-> BLAST+ to run BLASTx (https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html#blast-executables)
+-> samtools to run samtools faidx (https://www.htslib.org/) and
 -> seqkit (https://bioinf.shenwei.me/seqkit/download/)***
 
-# Preparar la base de datos
+# Prepare the Database
 
-Una vez que tenga instaladas las dependencias necesarias, debe ejecutar el script ***RGA_db_dwl.sh*** del siguiente modo:
+Once you have installed the necessary dependencies, you must run the ***RGA_db_dwl.sh*** script as follows:
 
 ```
 bash RGA_db_dwl.sh
 ```
 
-Esto descargará las bases de datos en la carpeta $HOME/db/RGA. Si gusta puede agregar la ruta donde se encuentren estos archivos generados a su ~/.bashrc del siguiente modo:
+This will download the databases to the $HOME/db/RGA folder. If you'd like, you can add the path to these generated files to your ~/.bashrc file as follows:
 
 ```
 nano ~/.bashrc
@@ -68,10 +64,12 @@ source ~/.bashrc
 
 # Uso y ejecución del pipline
 
-Una vez que tenga todos los requisitos, deberá ejecutar el pipeline de este modo:
+# Using and Running the Pipeline
 
- 
- Nota: Es importante que pegue las rutas completas en las opciones de "-f" y "-o" para que se pueda ejecutar de forma correcta el pipeline.
+Once you have all the requirements, you should run the pipeline as follows:
+
+
+ Note: It is important to paste the full paths into the “-f” and “-o” options so that the pipeline can run correctly.
  
 ```
 bash rabies_gene_annotator.sh -f FASTA file directory -o OUTPUT directory -p PATH to BLAST DB 
@@ -85,9 +83,9 @@ Usage: rabies_gene_annotator.sh -f FASTA file PATH -o OUTDIR PATH
 
 ```
 
-# Archivos de salida
+# Output Files
 
-Al final de la ejecución del pipline, en el directorio que usted indicó en la opción ***-o***, encontrará dos carpetas: Nucleotidos y Proteinas, en las cuales encontrará las secuencias de nucleotidos y aminoácidos, respectivamente; así como también encontrará el archivo **Annotation_all.tsv** donde estará la información de la anotación de sus secuencias.
+At the end of the pipeline run, in the directory you specified with the ***-o*** option, you will find two folders: Nucleotides and Proteins, containing the nucleotide and amino acid sequences, respectively; you will also find the **Annotation_all.tsv** file, which contains the annotation information for your sequences.
 
 
 
