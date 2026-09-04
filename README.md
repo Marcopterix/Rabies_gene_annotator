@@ -29,10 +29,10 @@ También es importante que agregue esta carpeta al PATH en su ***~/.bashrc***:
 nano ~/.bashrc
 
 # Una vez que esté editando su ~/.bashrc, deberá pegar la siguiente línea en un apartado donde usted tenga sus rutas,
-# en donde deberá sustituir "$HOME/PATH_TO/Rabies_gene_annotator/bin" por la ruta complea en donde usted haya clonado su repositorio.
+# en donde deberá sustituir "$HOME/PATH_TO/Rabies_virus_Gene_Annotator/bin" por la ruta complea en donde usted haya clonado su repositorio.
 # Para obtener esta ruta, deberá dirigirse al directorio bin, y una vez dentro de este, escribir en la terminal el comando pwd.
 
-export PATH="$HOME/PATH_TO/Rabies_gene_annotator/bin:$PATH"
+export PATH="$HOME/PATH_TO/Rabies_virus_Gene_Annotator/bin:$PATH"
 
 source ~/.bashrc
 
